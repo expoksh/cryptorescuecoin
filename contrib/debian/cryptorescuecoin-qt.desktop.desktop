@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=RESC
+Comment=RESC P2P Cryptocurrency
+Exec=cryptorescuecoin-qt %u
+Terminal=false
+Type=Application
+Icon=cryptorescuecoin128
+MimeType=x-scheme-handler/cryptorescuecoin;
+Categories=Office;Finance;
+Name[en_US]=cryptorescuecoin-qt.desktop

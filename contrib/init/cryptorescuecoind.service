@@ -1,0 +1,26 @@
+[Unit]
+Description=RESC's distributed currency daemon
+After=network.target
+
+[Service]
+User=cryptorescuecoin
+Group=cryptorescuecoin
+
+Type=forking
+PIDFile=/var/lib/cryptorescuecoind/cryptorescuecoind.pid
+
+ExecStart=/usr/bin/cryptorescuecoind -daemon -pid=/var/lib/cryptorescuecoind/cryptorescuecoind.pid \
+          -conf=/etc/cryptorescuecoin/cryptorescuecoin.conf -datadir=/var/lib/cryptorescuecoind
+
+ExecStop=-/usr/bin/cryptorescuecoin-cli -conf=/etc/cryptorescuecoin/cryptorescuecoin.conf \
+         -datadir=/var/lib/cryptorescuecoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

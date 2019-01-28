@@ -1,0 +1,26 @@
+# /etc/conf.d/cryptorescuecoind: config file for /etc/init.d/cryptorescuecoind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/cryptorescuecoin/cryptorescuecoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/cryptorescuecoind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/cryptorescuecoind.pid"
+
+# Where to write cryptorescuecoind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/cryptorescuecoind"
+
+# User and group to own cryptorescuecoind process
+#BITCOIND_USER="cryptorescuecoin"
+#BITCOIND_GROUP="cryptorescuecoin"
+
+# Path to cryptorescuecoind executable
+#BITCOIND_BIN="/usr/bin/cryptorescuecoind"
+
+# Nice value to run cryptorescuecoind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
